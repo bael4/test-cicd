@@ -12,10 +12,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: setup-xcode
+      - name: Set up Xcode
         uses: actions/setup-xcode@v2
         with:
-          xcode-version: '15.3'  # укажите актуальную версию Xcode
+          xcode-version: '13.0'  # укажите актуальную версию Xcode
 
       - name: Install dependencies
         run: swift package resolve
