@@ -18,8 +18,7 @@ jobs:
           xcode-version: '15.3'  # укажите актуальную версию Xcode
 
       - name: Install dependencies
-        run: |
-          xcodebuild -resolvePackageDependencies
+        run: swift package resolve
 
       - name: Build and Test
         run: |
