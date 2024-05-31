@@ -22,4 +22,4 @@ jobs:
 
       - name: Build and Test
         run: |
-          xcodebuild -workspace test-cicd.xcworkspace -scheme test-cicd -destination 'platform=iOS Simulator,name=iPhone 15' build test
+          xcodebuild -workspace project.xcworkspace -scheme test-cicd -destination 'platform=iOS Simulator,name=iPhone 15' build test
