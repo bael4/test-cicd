@@ -49,6 +49,7 @@
 		BEFC04F52C0A3D9B00C2D3D8 /* test-cicdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "test-cicdUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFC04F92C0A3D9B00C2D3D8 /* test_cicdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_cicdUITests.swift; sourceTree = "<group>"; };
 		BEFC04FB2C0A3D9B00C2D3D8 /* test_cicdUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_cicdUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BEFC050A2C0B251400C2D3D8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 				BEFC04EE2C0A3D9B00C2D3D8 /* test-cicdTests */,
 				BEFC04F82C0A3D9B00C2D3D8 /* test-cicdUITests */,
 				BEFC04D62C0A3D9A00C2D3D8 /* Products */,
+				BEFC05092C0B251400C2D3D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +127,14 @@
 				BEFC04FB2C0A3D9B00C2D3D8 /* test_cicdUITestsLaunchTests.swift */,
 			);
 			path = "test-cicdUITests";
+			sourceTree = "<group>";
+		};
+		BEFC05092C0B251400C2D3D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEFC050A2C0B251400C2D3D8 /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,7 +507,6 @@
 		BEFC05032C0A3D9B00C2D3D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -516,7 +525,6 @@
 		BEFC05042C0A3D9B00C2D3D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
