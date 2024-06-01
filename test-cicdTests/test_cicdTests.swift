@@ -34,3 +34,34 @@ final class test_cicdTests: XCTestCase {
     }
 
 }
+
+func sum(_ a: Int, _ b: Int) -> Int {
+    return a - b
+}
+
+import XCTest
+
+class ExampleTests: XCTestCase {
+    
+
+    // Тест на корректность сложения положительных чисел
+    func testSumPositiveNumbers() {
+        XCTAssertEqual(sum(2, 3), 5, "Expected sum of 2 and 3 to be 5")
+    }
+
+    // Тест на корректность сложения отрицательных чисел
+    func testSumNegativeNumbers() {
+        XCTAssertEqual(sum(-2, -3), -5, "Expected sum of -2 and -3 to be -5")
+    }
+
+    // Тест на корректность сложения положительного и отрицательного чисел
+    func testSumPositiveAndNegativeNumbers() {
+        XCTAssertEqual(sum(5, -3), 2, "Expected sum of 5 and -3 to be 2")
+    }
+
+    // Дополнительный тест на случай, когда одно из чисел равно нулю
+    func testSumWithZero() {
+        XCTAssertEqual(sum(0, 5), 5, "Expected sum of 0 and 5 to be 5")
+        XCTAssertEqual(sum(-5, 0), -5, "Expected sum of -5 and 0 to be -5")
+    }
+}
