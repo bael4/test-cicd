@@ -18,9 +18,6 @@ jobs:
     - name: Remove corrupted Package.resolved
       run: rm -f ./test-cicd.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
 
-    - name: Resolve dependencies
-      run: swift package resolve
-
     - name: Build
       run: xcodebuild -scheme test-cicd -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' build
 
