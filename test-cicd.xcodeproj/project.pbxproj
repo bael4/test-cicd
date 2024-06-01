@@ -16,6 +16,7 @@
 		BEFC04F02C0A3D9B00C2D3D8 /* test_cicdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC04EF2C0A3D9B00C2D3D8 /* test_cicdTests.swift */; };
 		BEFC04FA2C0A3D9B00C2D3D8 /* test_cicdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC04F92C0A3D9B00C2D3D8 /* test_cicdUITests.swift */; };
 		BEFC04FC2C0A3D9B00C2D3D8 /* test_cicdUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC04FB2C0A3D9B00C2D3D8 /* test_cicdUITestsLaunchTests.swift */; };
+		BEFC053E2C0B473400C2D3D8 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC053D2C0B473400C2D3D8 /* ExampleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,9 @@
 		BEFC04F92C0A3D9B00C2D3D8 /* test_cicdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_cicdUITests.swift; sourceTree = "<group>"; };
 		BEFC04FB2C0A3D9B00C2D3D8 /* test_cicdUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_cicdUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BEFC050A2C0B251400C2D3D8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BEFC05172C0B44B700C2D3D8 /* my_first_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_first_test.swift; sourceTree = "<group>"; };
+		BEFC05242C0B44F200C2D3D8 /* my_first_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_first_test.swift; sourceTree = "<group>"; };
+		BEFC053D2C0B473400C2D3D8 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				BEFC04D72C0A3D9A00C2D3D8 /* test-cicd */,
 				BEFC04EE2C0A3D9B00C2D3D8 /* test-cicdTests */,
 				BEFC04F82C0A3D9B00C2D3D8 /* test-cicdUITests */,
+				BEFC05162C0B44B700C2D3D8 /* my-first-test */,
+				BEFC05232C0B44F200C2D3D8 /* my-first-test */,
 				BEFC04D62C0A3D9A00C2D3D8 /* Products */,
 				BEFC05092C0B251400C2D3D8 /* Frameworks */,
 			);
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				BEFC04EF2C0A3D9B00C2D3D8 /* test_cicdTests.swift */,
+				BEFC053D2C0B473400C2D3D8 /* ExampleTests.swift */,
 			);
 			path = "test-cicdTests";
 			sourceTree = "<group>";
@@ -135,6 +142,22 @@
 				BEFC050A2C0B251400C2D3D8 /* XCTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEFC05162C0B44B700C2D3D8 /* my-first-test */ = {
+			isa = PBXGroup;
+			children = (
+				BEFC05172C0B44B700C2D3D8 /* my_first_test.swift */,
+			);
+			path = "my-first-test";
+			sourceTree = "<group>";
+		};
+		BEFC05232C0B44F200C2D3D8 /* my-first-test */ = {
+			isa = PBXGroup;
+			children = (
+				BEFC05242C0B44F200C2D3D8 /* my_first_test.swift */,
+			);
+			path = "my-first-test";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFC053E2C0B473400C2D3D8 /* ExampleTests.swift in Sources */,
 				BEFC04F02C0A3D9B00C2D3D8 /* test_cicdTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
