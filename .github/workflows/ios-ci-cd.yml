@@ -3,23 +3,23 @@ name: iOS CI/CD
 on:
   push:
     branches:
-      - main  # замените на вашу основную ветку
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-13
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - uses: actions/checkout@v2
 
-      - name: Set up Xcode
-        uses: actions/setup-xcode@v3
-        with:
-          xcode-version: '15.3'  # укажите актуальную версию Xcode
+    - name: Install dependencies
+      run: swift package resolve
 
-      - name: Install dependencies
-        run: swift package resolve
+    - name: Build
+      run: xcodebuild -scheme test-cicd -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' build
 
-      - name: Build and Test
-        run: |
-          xcodebuild -workspace project.xcworkspace -scheme test-cicd -destination 'platform=iOS Simulator,name=iPhone 13' build test
+    - name: Run tests
+      run: xcodebuild -scheme test-cicd -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' test
