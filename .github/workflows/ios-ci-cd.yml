@@ -10,13 +10,13 @@ on:
 
 jobs:
   build:
-    runs-on: macos-13
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: swift package resolve
+    - name: Remove corrupted Package.resolved
+      run: rm -f ./test-cicd.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
 
     - name: Build
       run: xcodebuild -scheme test-cicd -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' build
