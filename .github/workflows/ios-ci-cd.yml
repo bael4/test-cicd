@@ -15,8 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: swift package resolve
+    - name: Set up Xcode
+      run: sudo xcode-select -s /Applications/Xcode_15.3.0.app
 
     - name: Build
       run: xcodebuild -scheme test-cicd -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' build
